@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block body %}
+<div class="container jumbotron">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p><input type="text" name="username" placeholder='Username..'>
+        </p>
+        <p><input type="text" name="password" placeholder="password.."></p>
+        <input  class="btn btn-success" type="submit" value="Login">
+        <p>Do not have an account <a href='{% url 'register.html' %}'></a> </p>
+        
+    </form>
+</div>
+{% endblock body %}
